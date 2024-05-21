@@ -183,7 +183,7 @@ provinsi = {
 }
 
 # Membaca file JSON
-with open('.\\json\\data_advan_workplus_with_stock.json', 'r') as file:
+with open('.\\json\\advan_cleaned.json', 'r') as file:
     data = json.load(file)
 
 # Inisialisasi dictionary untuk menyimpan stok berdasarkan provinsi

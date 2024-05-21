@@ -1,0 +1,82 @@
+[
+    {
+        "Provinsi": "Banten",
+        "Stok": 14856.0
+    },
+    {
+        "Provinsi": "DKI Jakarta",
+        "Stok": 163744.0
+    },
+    {
+        "Provinsi": "Jawa Timur",
+        "Stok": 213243.0
+    },
+    {
+        "Provinsi": "Jawa Barat",
+        "Stok": 22538.0
+    },
+    {
+        "Provinsi": "DI Yogyakarta",
+        "Stok": 8100.0
+    },
+    {
+        "Provinsi": "Sumatera Utara",
+        "Stok": 103690.0
+    },
+    {
+        "Provinsi": "Jawa Tengah",
+        "Stok": 3122.0
+    },
+    {
+        "Provinsi": "Kalimantan Timur",
+        "Stok": 7175.0
+    },
+    {
+        "Provinsi": "Sulawesi Selatan",
+        "Stok": 1045.0
+    },
+    {
+        "Provinsi": "Sumatera Selatan",
+        "Stok": 2268.0
+    },
+    {
+        "Provinsi": "Kalimantan Selatan",
+        "Stok": 1780.0
+    },
+    {
+        "Provinsi": "Riau",
+        "Stok": 245.0
+    },
+    {
+        "Provinsi": "Lampung",
+        "Stok": 376.0
+    },
+    {
+        "Provinsi": "Sumatera Barat",
+        "Stok": 500.0
+    },
+    {
+        "Provinsi": "Bali",
+        "Stok": 18222.0
+    },
+    {
+        "Provinsi": "Jambi",
+        "Stok": 10.0
+    },
+    {
+        "Provinsi": "Nusa Tenggara Barat (NTB)",
+        "Stok": 3.0
+    },
+    {
+        "Provinsi": "Kalimantan Barat",
+        "Stok": 205.0
+    },
+    {
+        "Provinsi": "Kepulauan Bangka Belitung",
+        "Stok": 10.0
+    },
+    {
+        "Provinsi": "Tidak Diketahui",
+        "Stok": 46.0
+    }
+]

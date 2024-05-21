@@ -212,7 +212,7 @@ for item in data:
 data_provinsi = [{'Provinsi': provinsi, 'Stok': stok} for provinsi, stok in stok_provinsi.items()]
 
 # Menyimpan data ke file JSON baru
-with open('stok_provinsi.json', 'w') as file:
+with open('../stok_provinsi.json', 'w') as file:
     json.dump(data_provinsi, file, indent=4)
 
 print('Data stok per provinsi berhasil disimpan ke file stok_provinsi.json')

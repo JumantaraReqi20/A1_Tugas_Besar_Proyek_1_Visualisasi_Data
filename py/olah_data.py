@@ -182,42 +182,87 @@ provinsi = {
     ]
 }
 
-# Membaca file JSON
-with open('.\\json\\advan_cleaned.json', 'r') as file:
-    data = json.load(file)
+def olah_adv_stok_prov():
+    # Membaca file JSON
+    with open('.\\json\\advan_cleaned.json', 'r') as file:
+        data = json.load(file)
 
-# Inisialisasi dictionary untuk menyimpan stok berdasarkan provinsi
-stok_provinsi = {}
+    # Inisialisasi dictionary untuk menyimpan stok berdasarkan provinsi
+    stok_provinsi = {}
 
-# Iterasi setiap elemen dalam data JSON
-for item in data:
-    # Mengambil stok dan lokasi (kota/kabupaten)
-    stok = item.get('Stok', 0)
-    temp_lok = item.get('Lokasi', '')
-    if "Kab. " in temp_lok or "Kota " in temp_lok:
-        lokasi = temp_lok[temp_lok.find('. ')+2:]
-    else:
-        lokasi = item.get('Lokasi', '')
+    # Iterasi setiap elemen dalam data JSON
+    for item in data:
+        # Mengambil stok dan lokasi (kota/kabupaten)
+        stok = item.get('Stok', 0)
+        temp_lok = item.get('Lokasi', '')
+        if "Kab. " in temp_lok or "Kota " in temp_lok:
+            lokasi = temp_lok[temp_lok.find('. ')+2:]
+        else:
+            lokasi = item.get('Lokasi', '')
 
-    # Mencari provinsi berdasarkan lokasi
-    for provinsi_nama, kota_kabupaten in provinsi.items():
-        if lokasi in kota_kabupaten:
-            # Menjumlahkan stok untuk provinsi ini
-            if provinsi_nama in stok_provinsi:
-                stok_provinsi[provinsi_nama] += stok
-            else:
-                stok_provinsi[provinsi_nama] = stok
-            break
-    else:
-        # Jika lokasi tidak ditemukan dalam daftar provinsi
-        stok_provinsi['Tidak Diketahui'] = stok_provinsi.get('Tidak Diketahui', 0) + stok
-        print(lokasi)
+        # Mencari provinsi berdasarkan lokasi
+        for provinsi_nama, kota_kabupaten in provinsi.items():
+            if lokasi in kota_kabupaten:
+                # Menjumlahkan stok untuk provinsi ini
+                if provinsi_nama in stok_provinsi:
+                    stok_provinsi[provinsi_nama] += stok
+                else:
+                    stok_provinsi[provinsi_nama] = stok
+                break
+        else:
+            # Jika lokasi tidak ditemukan dalam daftar provinsi
+            stok_provinsi['Tidak Diketahui'] = stok_provinsi.get('Tidak Diketahui', 0) + stok
+            print(lokasi) # mengecek kota mana yang tidak terdapat di variable provinsi
 
-# Membuat list dari stok_provinsi
-data_provinsi = [{'Provinsi': provinsi, 'Stok': stok} for provinsi, stok in stok_provinsi.items()]
+    # Membuat list dari stok_provinsi
+    data_provinsi = [{'Provinsi': provinsi, 'Stok': stok} for provinsi, stok in stok_provinsi.items()]
 
-# Menyimpan data ke file JSON baru
-with open('.\\json\\stok_provinsi.json', 'w') as file:
-    json.dump(data_provinsi, file, indent=4)
+    # Menyimpan data ke file JSON baru
+    with open('.\\json\\stok_provinsi_advan.json', 'w') as file:
+        json.dump(data_provinsi, file, indent=4)
 
-print('Data stok per provinsi berhasil disimpan ke file stok_provinsi.json')
+    print('Data stok advan per provinsi berhasil disimpan ke file stok_provinsi.json')
+
+def olah_ax_stok_prov():
+    # Membaca file JSON
+    with open('.\\json\\axioo_cleaned.json', 'r') as file:
+        data = json.load(file)
+
+    # Inisialisasi dictionary untuk menyimpan stok berdasarkan provinsi
+    stok_provinsi = {}
+
+    # Iterasi setiap elemen dalam data JSON
+    for item in data:
+        # Mengambil stok dan lokasi (kota/kabupaten)
+        stok = item.get('Stok', 0)
+        temp_lok = item.get('Lokasi', '')
+        if "Kab. " in temp_lok or "Kota " in temp_lok:
+            lokasi = temp_lok[temp_lok.find('. ')+2:]
+        else:
+            lokasi = item.get('Lokasi', '')
+
+        # Mencari provinsi berdasarkan lokasi
+        for provinsi_nama, kota_kabupaten in provinsi.items():
+            if lokasi in kota_kabupaten:
+                # Menjumlahkan stok untuk provinsi ini
+                if provinsi_nama in stok_provinsi:
+                    stok_provinsi[provinsi_nama] += stok
+                else:
+                    stok_provinsi[provinsi_nama] = stok
+                break
+        else:
+            # Jika lokasi tidak ditemukan dalam daftar provinsi
+            stok_provinsi['Tidak Diketahui'] = stok_provinsi.get('Tidak Diketahui', 0) + stok
+            print(lokasi)
+
+    # Membuat list dari stok_provinsi
+    data_provinsi = [{'Provinsi': provinsi, 'Stok': stok} for provinsi, stok in stok_provinsi.items()]
+
+    # Menyimpan data ke file JSON baru
+    with open('.\\json\\stok_provinsi_axioo.json', 'w') as file:
+        json.dump(data_provinsi, file, indent=4)
+
+    print('Data stok per provinsi berhasil disimpan ke file stok_provinsi.json')
+
+olah_adv_stok_prov()
+olah_ax_stok_prov()

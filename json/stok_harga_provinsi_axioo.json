@@ -1,0 +1,82 @@
+[
+    {
+        "Provinsi": "DKI Jakarta",
+        "Stok": 46107,
+        "Rata_Rata_Harga": 15119939.263761468
+    },
+    {
+        "Provinsi": "Jawa Timur",
+        "Stok": 10197,
+        "Rata_Rata_Harga": 16015576.87735849
+    },
+    {
+        "Provinsi": "Sumatera Utara",
+        "Stok": 920,
+        "Rata_Rata_Harga": 15730055.555555556
+    },
+    {
+        "Provinsi": "Jawa Barat",
+        "Stok": 10844,
+        "Rata_Rata_Harga": 15269368.666666666
+    },
+    {
+        "Provinsi": "Kalimantan Timur",
+        "Stok": 1345,
+        "Rata_Rata_Harga": 15586398
+    },
+    {
+        "Provinsi": "Sulawesi Selatan",
+        "Stok": 264,
+        "Rata_Rata_Harga": 14375428.57142857
+    },
+    {
+        "Provinsi": "Riau",
+        "Stok": 271,
+        "Rata_Rata_Harga": 12713000
+    },
+    {
+        "Provinsi": "Bali",
+        "Stok": 3100,
+        "Rata_Rata_Harga": 15506306.666666666
+    },
+    {
+        "Provinsi": "Lampung",
+        "Stok": 1,
+        "Rata_Rata_Harga": 10705000
+    },
+    {
+        "Provinsi": "Banten",
+        "Stok": 3782,
+        "Rata_Rata_Harga": 13158597
+    },
+    {
+        "Provinsi": "Jawa Tengah",
+        "Stok": 969,
+        "Rata_Rata_Harga": 12404500
+    },
+    {
+        "Provinsi": "DI Yogyakarta",
+        "Stok": 2235,
+        "Rata_Rata_Harga": 14494133.333333334
+    },
+    {
+        "Provinsi": "Sumatera Barat",
+        "Stok": 26,
+        "Rata_Rata_Harga": 11137000
+    },
+    {
+        "Provinsi": "Kalimantan Selatan",
+        "Stok": 289,
+        "Rata_Rata_Harga": 13223500
+    },
+    {
+        "Provinsi": "Bengkulu",
+        "Stok": 3,
+        "Rata_Rata_Harga": 11325000
+    },
+    {
+        "Provinsi": "Sumatera Selatan",
+        "Stok": 236,
+        "Rata_Rata_Harga": 16534000
+    }
+]

@@ -190,13 +190,18 @@ def olah_adv_stok_prov():
     # Inisialisasi dictionary untuk menyimpan stok berdasarkan provinsi
     stok_provinsi = {}
     harga_provinsi = {}
+    avg_rate_prov = {}
+    jual_prov = {}
 
     # print('Data stok advan per provinsi berhasil disimpan ke file stok_provinsi.json')
     for item in data:
-        # Mengambil stok, harga, dan lokasi (kota/kabupaten)
+        # Mengambil stok, harga, rate, dan lokasi (kota/kabupaten)
         stok = item.get('Stok', 0)
         temp_lok = item.get('Lokasi', '')
         harga = item.get('Harga', 0)
+        rate_prov = item.get('average_rate', 0)
+        jual = item.get('Terjual', 0)
+
         if "Kab. " in temp_lok or "Kota " in temp_lok:
             lokasi = temp_lok[temp_lok.find('. ')+2:]
         else:
@@ -209,30 +214,51 @@ def olah_adv_stok_prov():
                 if provinsi_nama in stok_provinsi:
                     stok_provinsi[provinsi_nama] += stok
                     harga_provinsi[provinsi_nama].append(harga)
+                    jual_prov[provinsi_nama] += jual
+                    if rate_prov != None:
+                        try:
+                            avg_rate_prov[provinsi_nama].append(rate_prov)
+                        except:
+                            avg_rate_prov[provinsi_nama] = [rate_prov]    
                 else:
                     stok_provinsi[provinsi_nama] = stok
                     harga_provinsi[provinsi_nama] = [harga]
+                    jual_prov[provinsi_nama] = jual
+                    if rate_prov != None:
+                        avg_rate_prov[provinsi_nama] = [rate_prov]
                 break
         else:
             # Jika lokasi tidak ditemukan dalam daftar provinsi
             stok_provinsi['Tidak Diketahui'] = stok_provinsi.get('Tidak Diketahui', 0) + stok
+            
             harga_provinsi['Tidak Diketahui'] = harga_provinsi.get('Tidak Diketahui', [])
             harga_provinsi['Tidak Diketahui'].append(harga)
+            
+            avg_rate_prov['Tidak Diketahui'] = avg_rate_prov.get('Tidak Diketahui', [])
+            avg_rate_prov['Tidak Diketahui'].append(avg_rate_prov)
+            
+            jual_prov['Tidak Diketahui'] = jual_prov.get('Tidak Diketahui', 0) + jual
             print(lokasi)  # mengecek kota mana yang tidak terdapat di variable provinsi
 
     # Membuat list dari stok_provinsi dan menghitung rata-rata harga menggunakan mean
     data_provinsi = []
     for provinsi, stok in stok_provinsi.items():
         harga_list = harga_provinsi.get(provinsi, [])
+        rate_list = avg_rate_prov.get(provinsi, [])
         rata_rata_harga = mean(harga_list) if harga_list else 0
+        rata_rate = mean(rate_list) if rate_list else 0
+        terjual = jual_prov.get(provinsi, 0)
+        
         data_provinsi.append({
-            'Provinsi': provinsi,
-            'Stok': stok,
-            'Rata_Rata_Harga': rata_rata_harga
+            'provinsi': provinsi,
+            'stok': stok,
+            'rata_rata_harga': rata_rata_harga,
+            'rata_rata_rate': rata_rate,
+            'terjual': terjual
         })
 
     # Menyimpan data ke file JSON baru
-    with open('.\\json\\stok_harga_provinsi_advan.json', 'w') as file:
+    with open('.\\json\\provinsi_advan.json', 'w') as file:
         json.dump(data_provinsi, file, indent=4)
 
     print('Data stok dan rata-rata harga advan per provinsi berhasil disimpan ke file stok_harga_provinsi_advan.json')
@@ -245,13 +271,18 @@ def olah_ax_stok_prov():
     # Inisialisasi dictionary untuk menyimpan stok berdasarkan provinsi
     stok_provinsi = {}
     harga_provinsi = {}
-    
+    avg_rate_prov = {}
+    jual_prov = {}
+
     # print('Data stok advan per provinsi berhasil disimpan ke file stok_provinsi.json')
     for item in data:
-        # Mengambil stok, harga, dan lokasi (kota/kabupaten)
+        # Mengambil stok, harga, rate, dan lokasi (kota/kabupaten)
         stok = item.get('Stok', 0)
         temp_lok = item.get('Lokasi', '')
         harga = item.get('Harga', 0)
+        rate_prov = item.get('average_rate', 0)
+        jual = item.get('Terjual', 0)
+
         if "Kab. " in temp_lok or "Kota " in temp_lok:
             lokasi = temp_lok[temp_lok.find('. ')+2:]
         else:
@@ -264,33 +295,54 @@ def olah_ax_stok_prov():
                 if provinsi_nama in stok_provinsi:
                     stok_provinsi[provinsi_nama] += stok
                     harga_provinsi[provinsi_nama].append(harga)
+                    jual_prov[provinsi_nama] += jual
+                    if rate_prov != None:
+                        try:
+                            avg_rate_prov[provinsi_nama].append(rate_prov)
+                        except:
+                            avg_rate_prov[provinsi_nama] = [rate_prov]    
                 else:
                     stok_provinsi[provinsi_nama] = stok
                     harga_provinsi[provinsi_nama] = [harga]
+                    jual_prov[provinsi_nama] = jual
+                    if rate_prov != None:
+                        avg_rate_prov[provinsi_nama] = [rate_prov]
                 break
         else:
             # Jika lokasi tidak ditemukan dalam daftar provinsi
             stok_provinsi['Tidak Diketahui'] = stok_provinsi.get('Tidak Diketahui', 0) + stok
+            
             harga_provinsi['Tidak Diketahui'] = harga_provinsi.get('Tidak Diketahui', [])
             harga_provinsi['Tidak Diketahui'].append(harga)
+            
+            avg_rate_prov['Tidak Diketahui'] = avg_rate_prov.get('Tidak Diketahui', [])
+            avg_rate_prov['Tidak Diketahui'].append(avg_rate_prov)
+            
+            jual_prov['Tidak Diketahui'] = jual_prov.get('Tidak Diketahui', 0) + jual
             print(lokasi)  # mengecek kota mana yang tidak terdapat di variable provinsi
 
     # Membuat list dari stok_provinsi dan menghitung rata-rata harga menggunakan mean
     data_provinsi = []
     for provinsi, stok in stok_provinsi.items():
         harga_list = harga_provinsi.get(provinsi, [])
+        rate_list = avg_rate_prov.get(provinsi, [])
         rata_rata_harga = mean(harga_list) if harga_list else 0
-        data_provinsi.append({ 
-            'Provinsi': provinsi,
-            'Stok': stok,
-            'Rata_Rata_Harga': rata_rata_harga
+        rata_rate = mean(rate_list) if rate_list else 0
+        terjual = jual_prov.get(provinsi, 0)
+        
+        data_provinsi.append({
+            'provinsi': provinsi,
+            'stok': stok,
+            'rata_rata_harga': rata_rata_harga,
+            'rata_rata_rate': rata_rate,
+            'terjual': terjual
         })
 
     # Menyimpan data ke file JSON baru
-    with open('.\\json\\stok_harga_provinsi_axioo.json', 'w') as file:
+    with open('.\\json\\provinsi_axioo.json', 'w') as file:
         json.dump(data_provinsi, file, indent=4)
 
     print('Data stok dan rata-rata harga advan per provinsi berhasil disimpan ke file stok_harga_provinsi_axioo.json')
 
-olah_adv_stok_prov()
+# olah_adv_stok_prov()
 olah_ax_stok_prov()

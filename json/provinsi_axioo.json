@@ -1,0 +1,114 @@
+[
+    {
+        "provinsi": "DKI Jakarta",
+        "stok": 46107,
+        "rata_rata_harga": 15119939.263761468,
+        "rata_rata_rate": 4.9918620595102565,
+        "terjual": 681
+    },
+    {
+        "provinsi": "Jawa Timur",
+        "stok": 10197,
+        "rata_rata_harga": 16015576.87735849,
+        "rata_rata_rate": 5.0,
+        "terjual": 48
+    },
+    {
+        "provinsi": "Sumatera Utara",
+        "stok": 920,
+        "rata_rata_harga": 15730055.555555556,
+        "rata_rata_rate": 5.0,
+        "terjual": 4
+    },
+    {
+        "provinsi": "Jawa Barat",
+        "stok": 10844,
+        "rata_rata_harga": 15269368.666666666,
+        "rata_rata_rate": 4.990740740738889,
+        "terjual": 64
+    },
+    {
+        "provinsi": "Kalimantan Timur",
+        "stok": 1345,
+        "rata_rata_harga": 15586398,
+        "rata_rata_rate": 5.0,
+        "terjual": 3
+    },
+    {
+        "provinsi": "Sulawesi Selatan",
+        "stok": 264,
+        "rata_rata_harga": 14375428.57142857,
+        "rata_rata_rate": 5.0,
+        "terjual": 2
+    },
+    {
+        "provinsi": "Riau",
+        "stok": 271,
+        "rata_rata_harga": 12713000,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Bali",
+        "stok": 3100,
+        "rata_rata_harga": 15506306.666666666,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Lampung",
+        "stok": 1,
+        "rata_rata_harga": 10705000,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Banten",
+        "stok": 3782,
+        "rata_rata_harga": 13158597,
+        "rata_rata_rate": 5.0,
+        "terjual": 15
+    },
+    {
+        "provinsi": "Jawa Tengah",
+        "stok": 969,
+        "rata_rata_harga": 12404500,
+        "rata_rata_rate": 5.0,
+        "terjual": 4
+    },
+    {
+        "provinsi": "DI Yogyakarta",
+        "stok": 2235,
+        "rata_rata_harga": 14494133.333333334,
+        "rata_rata_rate": 5.0,
+        "terjual": 3
+    },
+    {
+        "provinsi": "Sumatera Barat",
+        "stok": 26,
+        "rata_rata_harga": 11137000,
+        "rata_rata_rate": 5.0,
+        "terjual": 1
+    },
+    {
+        "provinsi": "Kalimantan Selatan",
+        "stok": 289,
+        "rata_rata_harga": 13223500,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Bengkulu",
+        "stok": 3,
+        "rata_rata_harga": 11325000,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Sumatera Selatan",
+        "stok": 236,
+        "rata_rata_harga": 16534000,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    }
+]

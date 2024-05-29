@@ -1,0 +1,135 @@
+[
+    {
+        "provinsi": "Banten",
+        "stok": 13558,
+        "rata_rata_harga": 9692663.475609757,
+        "rata_rata_rate": 4.917377204844445,
+        "terjual": 21115
+    },
+    {
+        "provinsi": "DKI Jakarta",
+        "stok": 130380,
+        "rata_rata_harga": 10589172.43442623,
+        "rata_rata_rate": 4.978244965953846,
+        "terjual": 755
+    },
+    {
+        "provinsi": "Jawa Timur",
+        "stok": 212100,
+        "rata_rata_harga": 9907962.639175259,
+        "rata_rata_rate": 5.0,
+        "terjual": 49
+    },
+    {
+        "provinsi": "Jawa Barat",
+        "stok": 22132,
+        "rata_rata_harga": 10220318.566666666,
+        "rata_rata_rate": 5.0,
+        "terjual": 49
+    },
+    {
+        "provinsi": "DI Yogyakarta",
+        "stok": 5993,
+        "rata_rata_harga": 9700095.945945946,
+        "rata_rata_rate": 4.833333333333333,
+        "terjual": 10
+    },
+    {
+        "provinsi": "Sumatera Utara",
+        "stok": 103477,
+        "rata_rata_harga": 10237706.896551725,
+        "rata_rata_rate": 5.0,
+        "terjual": 30
+    },
+    {
+        "provinsi": "Jawa Tengah",
+        "stok": 2924,
+        "rata_rata_harga": 8791806.56521739,
+        "rata_rata_rate": 5.0,
+        "terjual": 23
+    },
+    {
+        "provinsi": "Kalimantan Timur",
+        "stok": 7089,
+        "rata_rata_harga": 11505451.612903226,
+        "rata_rata_rate": 5.0,
+        "terjual": 5
+    },
+    {
+        "provinsi": "Sulawesi Selatan",
+        "stok": 808,
+        "rata_rata_harga": 10091454.545454545,
+        "rata_rata_rate": 5.0,
+        "terjual": 16
+    },
+    {
+        "provinsi": "Sumatera Selatan",
+        "stok": 1874,
+        "rata_rata_harga": 8917580.76923077,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Kalimantan Selatan",
+        "stok": 1780,
+        "rata_rata_harga": 11390714.285714285,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Riau",
+        "stok": 245,
+        "rata_rata_harga": 9070500,
+        "rata_rata_rate": 0,
+        "terjual": 1
+    },
+    {
+        "provinsi": "Lampung",
+        "stok": 376,
+        "rata_rata_harga": 10585000,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Sumatera Barat",
+        "stok": 500,
+        "rata_rata_harga": 11231000,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Bali",
+        "stok": 17229,
+        "rata_rata_harga": 11392029.971830986,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Jambi",
+        "stok": 10,
+        "rata_rata_harga": 7425000,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Nusa Tenggara Barat (NTB)",
+        "stok": 3,
+        "rata_rata_harga": 7800000,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Kalimantan Barat",
+        "stok": 205,
+        "rata_rata_harga": 11451500,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    },
+    {
+        "provinsi": "Kepulauan Bangka Belitung",
+        "stok": 10,
+        "rata_rata_harga": 7500000,
+        "rata_rata_rate": 0,
+        "terjual": 0
+    }
+]

@@ -1,0 +1,96 @@
+@import url("fonts.css");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-Nunito font-bold;
+}
+
+.header {
+  @apply text-[90px] font-BazarMedium text-center [text-shadow:1px_2px_#FCFAF7,3px_4px_#484A4D] mb-[0.33rem];
+}
+
+hr.top-dashed {
+  @apply top-3;
+}
+
+hr.bottom-dashed {
+  @apply bottom-3;
+}
+
+hr.top-dashed,
+hr.bottom-dashed {
+  @apply m-0 [border-top:1px_dashed_rgba(0,0,0,0.25)] [border-bottom:1px_dashed_rgba(255,255,255,0.25)] absolute bottom-3 z-10 w-full h-0;
+}
+
+.principle-container hr {
+  @apply border-none bg-[rgba(56,58,60,0.9)] h-[3px] w-[40px] m-[0_auto_10px_auto];
+}
+
+/* ? NAVBAR NAVIGATION */
+
+nav > div:nth-child(1) a {
+  @apply max-md:block max-md:mb-2 max-md:border-slate-500/25 max-md:border-solid max-md:border-b-2;
+}
+
+.navigation-md {
+  @apply max-md:block max-md:opacity-0 max-md:absolute max-md:top-[68px] max-md:left-0 max-md:bg-[#78bbbb] max-md:p-3;
+}
+
+.navigation-lg {
+  @apply lg:flex lg:justify-center lg:items-center lg:gap-5;
+}
+
+.navigation-link {
+  @apply text-xl lg:text-3xl font-medium font-BazarMedium text-slate-100;
+}
+
+/* ? HAMBURGER */
+.hamburger-line {
+  @apply h-[2px] w-[18px] bg-slate-600 duration-200;
+}
+
+#hamburger.active > div:nth-child(1) {
+  @apply rotate-45;
+}
+
+#hamburger.active > div:nth-child(2) {
+  @apply scale-0;
+}
+
+#hamburger.active > div:nth-child(3) {
+  @apply -rotate-45;
+}
+
+/* ? HERO */
+
+/* ? PRINCIPLE */
+.principle-container {
+  @apply px-3 flex flex-col justify-center items-center text-center;
+}
+
+.principle-icon {
+  @apply flex justify-center items-center h-[150px] w-[150px] mb-[20px] rounded-[50%] bg-[#D35244] [box-shadow:inset_0_0_0px_4px_#D35244,inset_0_0_0_8px_#F5EEE3];
+}
+/* ? PRINCIPLE */
+
+/* ? CARDS */
+.card-container {
+  @apply m-auto w-[320px] h-[480px] [perspective:1000px] max-md:scale-[.75] md:scale-90 lg:scale-100;
+}
+
+.card {
+  @apply relative w-full h-full transition-all duration-1000 [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)];
+}
+
+.card-face {
+  @apply absolute inset-0 rounded-[16px];
+}
+
+.card-front {
+  @apply h-full w-full object-cover;
+}
+/* ? CARDS */

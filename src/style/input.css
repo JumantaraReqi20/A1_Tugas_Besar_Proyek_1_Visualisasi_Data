@@ -30,6 +30,24 @@ hr.bottom-dashed {
   @apply border-none bg-[rgba(56,58,60,0.9)] h-[3px] w-[40px] m-[0_auto_10px_auto];
 }
 
+/* ? BUTTON */
+button {
+  @apply xl:scale-125 relative text-[12px] font-bold p-[4px_8px_4px_12px] m-[0_6px_4px_12px] text-[#383A3C] bg-[#FCFAF7] 
+  cursor-pointer [border-top-right-radius:3px] [border-bottom-right-radius:3px] [box-shadow:1px_1px_1px_rgba(0,0,0,0.2)]
+  before:[content:""] before:float-left before:absolute before:top-0 before:-left-[12px] before:w-0 before:h-0 before:[border-color:rgba(0,0,0,0)_#FCFAF7_rgba(0,0,0,0)_rgba(0,0,0,0)]
+  before:[border-style:solid] before:[border-width:12px_12px_12px_0]
+  after:[content:""] after:absolute after:top-[11px] after:left-0 after:w-[4px] after:h-[4px] after:[border-radius:2px] after:bg-[#959CA3];
+}
+
+button.active {
+  @apply bg-[#383A3C] text-[#FCFAF7] before:[border-color:rgba(0,0,0,0)_#383A3C_rgba(0,0,0,0)_rgba(0,0,0,0)];
+}
+
+/* ? FILTERABLES */
+#filterables div.hide {
+  @apply hidden;
+}
+
 /* ? NAVBAR NAVIGATION */
 
 nav > div:nth-child(1) a {

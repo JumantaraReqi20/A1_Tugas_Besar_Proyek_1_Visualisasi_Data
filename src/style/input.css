@@ -98,7 +98,7 @@ nav > div:nth-child(1) a {
 
 /* ? CARDS */
 .card-container {
-  @apply m-auto w-[320px] h-[480px] [perspective:1000px] relative scale-[.85] md:scale-90;
+  @apply my-0 mx-auto w-[320px] h-[480px] [perspective:1000px] relative scale-[.70] md:scale-90;
 }
 
 .card {

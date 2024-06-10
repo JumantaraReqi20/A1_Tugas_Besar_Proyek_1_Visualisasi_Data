@@ -1,5 +1,6 @@
 @import url("fonts.css");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -97,7 +98,7 @@ nav > div:nth-child(1) a {
 
 /* ? CARDS */
 .card-container {
-  @apply m-auto w-[320px] h-[480px] [perspective:1000px] scale-90 lg:scale-100;
+  @apply m-auto w-[320px] h-[480px] [perspective:1000px] relative scale-[.85] md:scale-90;
 }
 
 .card {

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
+
 @font-face {
   font-family: "BazarMedium";
 
@@ -632,12 +634,12 @@ video {
   display: grid;
 }
 
-.h-11{
-  height: 2.75rem;
+.h-10{
+  height: 2.5rem;
 }
 
-.h-16{
-  height: 4rem;
+.h-11{
+  height: 2.75rem;
 }
 
 .h-\[100vh\]{
@@ -664,8 +666,16 @@ video {
   transform-origin: top left;
 }
 
+.list-disc{
+  list-style-type: disc;
+}
+
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -863,11 +873,6 @@ video {
   line-height: 2.25rem;
 }
 
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -885,6 +890,10 @@ video {
 
 .font-bold{
   font-weight: 700;
+}
+
+.font-extrabold{
+  font-weight: 800;
 }
 
 .font-medium{
@@ -940,7 +949,7 @@ video {
 }
 
 body{
-  font-family: Nunito, sanf-serif;
+  font-family: Nunito, sans-serif;
   font-weight: 700;
 }
 
@@ -1164,19 +1173,20 @@ button.active::before{
 /* ? CARDS */
 
 .card-container{
+  position: relative;
   margin: auto;
   height: 480px;
   width: 320px;
-  --tw-scale-x: .9;
-  --tw-scale-y: .9;
+  --tw-scale-x: .85;
+  --tw-scale-y: .85;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   perspective: 1000px;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 768px){
   .card-container{
-    --tw-scale-x: 1;
-    --tw-scale-y: 1;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
@@ -1211,8 +1221,23 @@ button.active::before{
 
 /* ? CARDS */
 
+.group:hover .group-hover\:bg-blue-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
+
 .group:hover .group-hover\:\[transform\:rotateY\(180deg\)\]{
   transform: rotateY(180deg);
+}
+
+.group:hover .group-hover\:after\:absolute::after{
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.group:hover .group-hover\:after\:w-9::after{
+  content: var(--tw-content);
+  width: 2.25rem;
 }
 
 @media not all and (min-width: 1024px){
@@ -1258,6 +1283,10 @@ button.active::before{
 }
 
 @media (min-width: 1024px){
+  .lg\:h-16{
+    height: 4rem;
+  }
+
   .lg\:w-1\/2{
     width: 50%;
   }
@@ -1283,6 +1312,11 @@ button.active::before{
   .lg\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 

@@ -48,16 +48,18 @@
       class="flex justify-center items-center bg-[#78bbbb] mt-[68px] relative h-[100vh]"
     >
       <hr class="top-dashed" />
-      <div class="w-1/2 mx-auto">
+      <div class="w-3/4 lg:w-1/2 mx-auto">
         <figure class="p-3 rounded-[4px] bg-slate-200">
-          <img class="mb-4" src="src/assets/picts/a1_team.jpg" alt="" />
-          <figcaption class="text-4xl font-BazarMedium text-center">
+          <img class="w-full mb-4" src="src/assets/picts/a1_team.jpg" alt="" />
+          <figcaption class="text-2xl lg:text-4xl font-BazarMedium text-center">
             ALPHA ONE
           </figcaption>
         </figure>
         <div class="my-5 font-BazarMedium text-center text-[#F6EDD8]">
-          <h2 class="text-4xl mb-2">"HELLO, WE ARE TEAM A1.</h2>
-          <h3 class="text-3xl">WELCOME TO OUR DATA SCRAPING PROJECT"</h3>
+          <h2 class="text-xl lg:text-4xl mb-2">"HELLO, WE ARE TEAM A1.</h2>
+          <h3 class="text-xl lg:text-3xl">
+            WELCOME TO OUR DATA SCRAPING PROJECT"
+          </h3>
         </div>
       </div>
       <hr class="bottom-dashed" />
@@ -173,7 +175,7 @@
       <div class="header max-md:scale-75">VISUALISASI DATA</div>
       <div
         id="filter-buttons"
-        class="w-full flex justify-center items-center mb-3 xl:gap-5"
+        class="w-full flex justify-center items-start flex-wrap mb-3 xl:gap-5"
       >
         <button data-set="all" class="active">Show All</button>
         <button data-set="peta-harga">Peta Harga</button>
@@ -183,7 +185,7 @@
       </div>
       <div
         id="filterables"
-        class="w-full h-full grid gap-3 items-center justify-center overflow-hidden sm:grid-cols-1 lg:grid-cols-2"
+        class="relative w-full h-full grid gap-3 items-center justify-center grid-cols-1 lg:grid-cols-2"
       >
         <div
           data-set="peta-harga"

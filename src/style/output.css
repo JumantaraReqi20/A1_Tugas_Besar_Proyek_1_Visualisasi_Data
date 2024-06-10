@@ -648,16 +648,16 @@ video {
   height: 100%;
 }
 
-.w-full{
-  width: 100%;
-}
-
 .w-1\/2{
   width: 50%;
 }
 
-.max-w-\[940px\]{
-  max-width: 940px;
+.w-full{
+  width: 100%;
+}
+
+.w-3\/4{
+  width: 75%;
 }
 
 .origin-bottom-left{
@@ -666,6 +666,10 @@ video {
 
 .origin-top-left{
   transform-origin: top left;
+}
+
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -986,9 +990,11 @@ button{
   position: relative;
   margin: 0 6px 4px 12px;
   cursor: pointer;
+  text-wrap: nowrap;
   --tw-bg-opacity: 1;
   background-color: rgb(252 250 247 / var(--tw-bg-opacity));
   padding: 4px 8px 4px 12px;
+  font-size: 12px;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(56 58 60 / var(--tw-text-opacity));
@@ -1022,18 +1028,6 @@ button::after{
   content: var(--tw-content);
   border-radius: 2px;
   content: "";
-}
-
-@media (min-width: 640px){
-  button{
-    font-size: 8px;
-  }
-}
-
-@media (min-width: 768px){
-  button{
-    font-size: 12px;
-  }
 }
 
 @media (min-width: 1280px){
@@ -1275,12 +1269,26 @@ button.active::before{
 }
 
 @media (min-width: 1024px){
+  .lg\:w-1\/2{
+    width: 50%;
+  }
+
   .lg\:grid-cols-1{
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 

@@ -10,7 +10,7 @@ body {
 }
 
 .header {
-  @apply text-[90px] font-BazarMedium text-center [text-shadow:1px_2px_#FCFAF7,3px_4px_#484A4D] mb-[0.33rem];
+  @apply text-[48px] lg:text-[90px] font-BazarMedium text-center [text-shadow:1px_2px_#FCFAF7,3px_4px_#484A4D] mb-[0.33rem];
 }
 
 hr.top-dashed {
@@ -97,7 +97,7 @@ nav > div:nth-child(1) a {
 
 /* ? CARDS */
 .card-container {
-  @apply m-auto w-[320px] h-[480px] [perspective:1000px] max-md:scale-[.75] md:scale-90 lg:scale-100;
+  @apply m-auto w-[320px] h-[480px] [perspective:1000px] scale-90 lg:scale-100;
 }
 
 .card {
